@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
-import 'package:shared_preferences/shared_preferences.dart';  // SharedPreferences 임포트
+import 'package:shared_preferences/shared_preferences.dart';
 
 class AuthService {
   static final String _authUrl = "https://daram-gsm.kro.kr/gauth/authorization";
@@ -44,24 +44,18 @@ class AuthService {
   }
 
   static Future<Map<String, String>> _getTokensFromCode(String code) async {
-    // JSON body 구성
     final body = jsonEncode({"code": "$code"});
-
-    // 요청 정보 디버깅 출력
     print('Sending POST request to $_tokenUrl');
     print('Request headers:');
     print({'Content-Type': 'application/json'});
     print('Request body:');
     print(body);
-
-    // 서버에 POST 요청 보내기
     final response = await http.post(
       Uri.parse(_tokenUrl),
       headers: {'Content-Type': 'application/json'},
       body: body,
     );
 
-    // 응답 정보 디버깅 출력
     print('Response status: ${response.statusCode}');
     print('Response body: ${response.body}');
 
