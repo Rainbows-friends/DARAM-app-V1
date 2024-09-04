@@ -58,7 +58,27 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
-
+  fonts:
+    - family: SUIT
+      fonts:
+        - asset: lib/assets/fonts/SUIT-Heavy.otf
+          weight: 900
+        - asset: lib/assets/fonts/SUIT-ExtraBold.otf
+          weight: 800
+        - asset: lib/assets/fonts/SUIT-Bold.otf
+          weight: 700
+        - asset: lib/assets/fonts/SUIT-SemiBold.otf
+          weight: 600
+        - asset: lib/assets/fonts/SUIT-Medium.otf
+          weight: 500
+        - asset: lib/assets/fonts/SUIT-Regular.otf
+          weight: 400
+        - asset: lib/assets/fonts/SUIT-Light.otf
+          weight: 300
+        - asset: lib/assets/fonts/SUIT-ExtraLight.otf
+          weight: 200
+        - asset: lib/assets/fonts/SUIT-Thin.otf
+          weight: 100
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
